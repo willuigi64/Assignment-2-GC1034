@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ca.georgiancollege.assignment2gc1034.LookupController">
+   <children>
+      <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="38.0" prefWidth="572.0" text="MobyGames">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <TextField fx:id="searchBar" layoutX="14.0" layoutY="62.0" prefHeight="26.0" prefWidth="390.0" promptText="Search games, developers, studios, and corporations" />
+      <Button fx:id="searchBtn" layoutX="426.0" layoutY="62.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="160.0" text="Search MobyGames" />
+      <ListView fx:id="resultList" layoutX="17.0" layoutY="109.0" prefHeight="252.0" prefWidth="569.0" />
+      <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="369.0" prefHeight="19.0" prefWidth="494.0" text="Data provided by " />
+      <Hyperlink fx:id="creditLink" layoutX="504.0" layoutY="367.0" prefHeight="23.0" prefWidth="83.0" text="MobyGames" />
+   </children>
+</AnchorPane>
