@@ -5,7 +5,7 @@ import com.google.gson.Gson;
 public class APITester {
     static void simpleJsonCall(){
         APIUtility api = new APIUtility();
-        String json = api.sendRequest("https://api.mobygames.com/v1/games?api_key=moby_B7XtgpO1L9MbBw8SfOmdd8pk2n2&format=brief&id=1");
+        String json = api.sendRequest("https://api.mobygames.com/v1/games?api_key=moby_B7XtgpO1L9MbBw8SfOmdd8pk2n2&format=normal&id=1");
         System.out.println(json);
     }
 
@@ -23,7 +23,14 @@ public class APITester {
     //user choice comes in the form of selecting a platform,
     //or a random game.
 
-    public static void main(String[] args) {
+    static void createGameObject(){
+        MobyAPIRequest request = new MobyAPIRequest();
+        Games games = request.getData("https://api.mobygames.com/v1/games/random?api_key=moby_B7XtgpO1L9MbBw8SfOmdd8pk2n2&format=brief&limit=20");
+        System.out.println("Game ID: "+games.getGames()[0].getGame_id());
+        System.out.println("Game Title: "+games.getGames()[0].getTitle());
+    }
 
+    public static void main(String[] args) {
+        createGameObject();
     }
 }
